@@ -1,0 +1,12 @@
+env:
+  browser: true
+  es6: true
+extends: 'eslint:recommended'
+rules:
+  no-unused-vars:               # For defining p5 setup and draw etc.
+    - off
+  no-undef:                     # For calling p5 globals
+    - off
+  semi:
+    - error
+    - always

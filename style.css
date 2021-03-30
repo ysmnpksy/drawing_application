@@ -1,0 +1,108 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+    width: 120%;
+    align-content: center;
+	overflow-y: scroll;
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:7px;
+}
+
+.sideBarItem img{
+	max-height: 50px;
+	max-Width:50px;
+}
+
+.hover {
+    background: lightgray;
+}
+
+.text {
+    color: lightgray;
+    grid-area: 1 / 1 / span 1 / span 3;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+}
+
+.sliderText{
+    color: lightgray;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    grid-area: 2 / 1 / span 1 / span 2;
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 10px
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options{
+	grid-area: options;
+    display: grid;
+    grid-template-columns:95px 95px;
+    grid-template-rows: 35px 35px;
+	padding: 15px;
+    
+}
+.slider{
+  grid-area: 3 / 1 / span 1 / span 2
+}
+
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+
+.wrapper {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 70px 230px  minmax(500px, 1fr);
+    grid-template-rows: 35px minmax(500px, 1fr) 160px;
+    grid-template-areas:
+           "header header header"
+            "sidebar content content"
+            "colourP colourP options";
+    background-color: #fff;
+    color: #444;
+}
+.box {
+  background-color: #444;
+  color: #fff;
+  font-size: 150%;
+}
+
+.header {
+  background-color: #999;
+}
